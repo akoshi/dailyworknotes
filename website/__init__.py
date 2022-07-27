@@ -11,7 +11,7 @@ DB_NAME = "database.db"
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'hdksjahdkjas'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://xprgtftvofhvuy:487d726a61ad7ebeecbfae8a23da0ef3e8c42f877a0b4f65c2a4758f946c5122@ec2-3-222-74-92.compute-1.amazonaws.com:5432/d7hahtlmek22so'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://xprgtftvofhvuy:487d726a61ad7ebeecbfae8a23da0ef3e8c42f877a0b4f65c2a4758f946c5122@ec2-3-222-74-92.compute-1.amazonaws.com:5432/d7hahtlmek22so'
     db.init_app(app)
 
     from .views import views
