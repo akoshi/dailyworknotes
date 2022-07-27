@@ -14,9 +14,6 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ipybsmsekknvcw:3818f6514d9fc277e0da0e278476a7a4f22b7aba6c35a3c3af5aaa0e100f6e37@ec2-44-195-100-240.compute-1.amazonaws.com:5432/dd38dao57q00fv'
     db.init_app(app)
 
-    with app.app_context():
-        db.create_all()
-
     from .views import views
     from .auth import auth
     
